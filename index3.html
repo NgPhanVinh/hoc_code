@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index3</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let layjs = localStorage.getItem("vinhduc");
+
+    if(layjs){
+        vaojs = JSON.parse(layjs)
+    }
+    let mangmoi3 = []
+    for(var i = 11; i < 21; i++){
+        mangmoi3.push(i)
+    }
+    let mangnoi = vaojs.concat(mangmoi3);
+
+    let tong = 0
+    for(let i = 0; i < mangnoi.length; i++){
+        tong += mangnoi[i]
+    }
+    alert(tong)
+</script>
+</html>

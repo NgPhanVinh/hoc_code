@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let layjs = localStorage.getItem("vinhduc")
+
+    if(layjs){
+
+        vaojs = JSON.parse(layjs)       // chuyen lai thanh dang mang
+
+        let mangmoi = []
+        
+        
+        for(var i = 0; i < vaojs.length; i++){
+            if(vaojs[i] <= 5){
+                mangmoi.push(vaojs[i])
+            }
+        }
+        console.log(mangmoi)
+
+                        // CÚ PHÁP CỦA filler
+                        // let mangmoi = mangcu.filter(function(value) {
+                        // return điều_kiện;
+                        // });
+        let mangmoi2 = vaojs.filter(function(value){
+            return value <= 5
+
+
+        });
+
+        console.log(mangmoi2)
+
+        localStorage.setItem("mangmoi", JSON.stringify(mangmoi))
+    }
+    
+</script>
+</html>
